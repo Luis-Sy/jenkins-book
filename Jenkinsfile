@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             agent{
 				docker {
-				image: 'node:22.14.0-alpine'
+				image 'node:22.14.0-alpine'
 				reuseNode true
             }
         }
@@ -18,7 +18,6 @@ pipeline {
 					npm run build
 					ls -la
 				'''
-				echo 'build complete'
 			}
 		}	
 
